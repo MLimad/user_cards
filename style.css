@@ -34,10 +34,14 @@ main{
     position: relative;
     width: 300px;
     min-height: 442px;
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 5px;
     overflow: hidden;
+    background: hsla(0, 0%, 6%, 1);
+    background: linear-gradient(45deg, hsla(0, 0%, 6%, 1) 0%, hsla(0, 0%, 6%, 1) 0%, hsla(205, 27%, 21%, 1) 100%);
+    background: -moz-linear-gradient(45deg, hsla(0, 0%, 6%, 1) 0%, hsla(0, 0%, 6%, 1) 0%, hsla(205, 27%, 21%, 1) 100%);
+    background: -webkit-linear-gradient(45deg, hsla(0, 0%, 6%, 1) 0%, hsla(0, 0%, 6%, 1) 0%, hsla(205, 27%, 21%, 1) 100%);
 }
 
 
@@ -99,10 +103,9 @@ main{
 
 #card .content p:last-of-type{
     color: var(--sec-color);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: lighter;
     line-height: 1.5;
-
 }
 
 #card .actions{
@@ -110,6 +113,7 @@ main{
     min-height: 35px;
     display: flex;
     justify-content: space-between;
+    margin: 10px 0;
     
 }
 
@@ -118,7 +122,6 @@ main{
     height: 35px;
     border-radius: 0;
     outline: 0;
-    margin: 2%;
     background-color: transparent;
     cursor: pointer;
     overflow: hidden;
@@ -133,25 +136,13 @@ main{
     border: 1px solid var(--third-color);
     z-index: 2;
     color: white;
+    background-color :var(--third-color);
+    margin-right: 2%;
 }
 
-#card .actions button:first-of-type:hover::before{
 
-    transform: translateX(0);
-}
 
-#card .actions button:first-of-type::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--third-color);
-    transform: translateX(-300%);
-    transition: 0.3s all;
-    z-index: -1;
-}
+
 
 
 
@@ -159,26 +150,7 @@ main{
     position: relative;
     border: 1px solid var(--sec-color);
     z-index: 2;
-    color: white;
+    color: var(--sec-color);
+    margin-left: 2%;
 }
 
-#card .actions button:last-of-type:hover::before{
-    transform: translateX(0);
-}
-
-#card .actions button:last-of-type:hover{
-    color: black;
-}
-
-#card .actions button:last-of-type::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--sec-color);
-    transform: translateX(300%);
-    transition: 0.3s all;
-    z-index: -1;
-}
